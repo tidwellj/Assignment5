@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 [System.Serializable]
-public class Word {
+public class Word
+{
     public string word;
     private int typeIndex;
     WordDisplay display;
-    public Word (string _word, WordDisplay _display)
+    public Word(string _word, WordDisplay _display)
     {
         word = _word;
         typeIndex = 0;
@@ -14,7 +15,7 @@ public class Word {
         display.SetWord(word);
 
     }
-   public char GetNextLetter()
+    public char GetNextLetter()
     {
         return word[typeIndex];
     }
@@ -29,6 +30,7 @@ public class Word {
         if (wordTyped)
         {
             display.RemoveWord();
+            
         }
         return wordTyped;
     }
