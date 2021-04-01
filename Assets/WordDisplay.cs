@@ -8,7 +8,7 @@ public class WordDisplay : MonoBehaviour
 
 
     public Text text;
-    private float fallSpeed = 1f;
+    public float fallSpeed = 5f;
     public static int score = 0;
     public static string diff = DropD1.lives;
     public void Start()

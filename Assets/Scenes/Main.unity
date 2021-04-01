@@ -2624,6 +2624,7 @@ GameObject:
   - component: {fileID: 1559359167}
   - component: {fileID: 1559359168}
   - component: {fileID: 1559359169}
+  - component: {fileID: 1559359170}
   m_Layer: 0
   m_Name: WordManager
   m_TagString: Untagged
@@ -2700,6 +2701,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wordManager: {fileID: 1559359165}
   wordDelay: 1.5
+--- !u!114 &1559359170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559359164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b120160065aff94c9a4335ab4168d89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myObject:
+    score: 0
+    score1: 0
+    score2: 0
+    score3: 0
+    textscore1: 
+    textscore2: 
+    textscore3: 
 --- !u!1 &1601751179
 GameObject:
   m_ObjectHideFlags: 0
