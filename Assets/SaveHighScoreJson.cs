@@ -5,17 +5,18 @@ using UnityEngine.SceneManagement;
 [System.Serializable]
 public class SaveHighScoreJson : MonoBehaviour
 {
-
+   // ArrayList scores = new ArrayList();
     // static public bool expo2;
     //static public int altScore = 0;
-    static public int score = 350;
-    static public int score1 = 250;
-    static public int score2 = 150;
+    static public int score = 3;
+    static public int score1 = 2;
+    static public int score2 = 1;
     public static string textscore4;
     public static string textscore5;
     public static string textscore6;
     public static int nam = 0;
     public static int nam2 = 0;
+    public static bool loaded;
     [System.Serializable]
     public class MyClass
     {
@@ -46,51 +47,34 @@ public class SaveHighScoreJson : MonoBehaviour
 
         if (myObject.score > score)
         {
+            textscore4 = NameText.userIDs + " " + myObject.score;
             score = myObject.score;
-            nam = 1;
+            //nam = 1;
         }
         else if (myObject.score < score && myObject.score > score1)
         {
+            textscore5 = NameText.userIDs + " " + myObject.score;
             score1 = myObject.score;
-            nam = 1;
+            //nam = 1;
         }
         else if (myObject.score < score1 && myObject.score > score2)
         {
+            textscore6 = NameText.userIDs + " " + myObject.score;
             score2 = myObject.score;
-            nam = 1;
+            // nam = 1;
         }
+
         myObject.score1 = score;
         myObject.score2 = score1;
         myObject.score3 = score2;
+        myObject.textscore1 = textscore4;
+        myObject.textscore2 = textscore5;
+        myObject.textscore3 = textscore6;
+       
+        
 
 
-
-
-        if (nam == 1)
-        {
-            myObject.textscore1 = NameText.userIDs + " " + score.ToString();
-            nam = 0;
-            nam2 = 1;
-        }
-
-
-        if (nam == 1)
-        {
-            myObject.textscore2 = NameText.userIDs + " " + score1.ToString();
-            nam = 0;
-            nam2 = 1;
-        }
-
-
-
-        if (nam == 1)
-        {
-            myObject.textscore3 = NameText.userIDs + " " + score2.ToString();
-            nam = 0;
-            nam2 = 1;
-        }
-
-
+       
         //  myObject.textscore1 = myObject.textscore1;
 
 
@@ -106,7 +90,7 @@ public class SaveHighScoreJson : MonoBehaviour
 
     }
 
-    public void LoadIt()
+    public void Bingo2()
     {
 
         string json = PlayerPrefs.GetString("Save");
@@ -117,33 +101,11 @@ public class SaveHighScoreJson : MonoBehaviour
 
 
 
-        score = myObject.score1;
+       score = myObject.score1;
         score1 = myObject.score2;
-        score2 = myObject.score3;
-        if (nam2 == 1)
-        {
-            textscore4 = myObject.textscore1 = NameText.userIDs + " " + score.ToString();
-        }
-        else
-        {
-            textscore4 = myObject.textscore1;
-        }
-        if (nam2 == 1)
-        {
-            textscore5 = myObject.textscore2 = NameText.userIDs + " " + score.ToString();
-        }
-        else
-        {
-            textscore5 = myObject.textscore2;
-        }
-        if (nam2 == 1)
-        {
-            textscore6 = myObject.textscore3 = NameText.userIDs + " " + score.ToString();
-        }
-        else
-        {
-            textscore6 = myObject.textscore3;
-        }
+       score2 = myObject.score3;
+        
+        
         textscore4 = myObject.textscore1;
         textscore5 = myObject.textscore2;
         textscore6 = myObject.textscore3;
@@ -152,9 +114,8 @@ public class SaveHighScoreJson : MonoBehaviour
         PlayerPrefs.Save();
 
 
+        loaded = true;
 
-
-        // expo2 = true;
     }
 
 

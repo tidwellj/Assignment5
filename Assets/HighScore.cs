@@ -14,13 +14,16 @@ public class HighScore : MonoBehaviour
     // Start is called before the first frame update
 
 
+    
 
 
     // Update is called once per frame
     void Update()
     {
         // if (SaveHighScoreJson.expo2 == true)
-        // {
+       
+        FindObjectOfType<SaveHighScoreJson>().Bingo2();
+
         FindObjectOfType<SaveHighScoreJson>().Bingo();
 
         score = SaveHighScoreJson.textscore4;
