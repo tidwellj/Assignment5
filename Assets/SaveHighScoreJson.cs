@@ -47,19 +47,19 @@ public class SaveHighScoreJson : MonoBehaviour
 
         if (myObject.score > score)
         {
-            textscore4 = NameText.userIDs + " " + myObject.score;
+            textscore4 = "1      " + NameText.userIDs + "      " + myObject.score;
             score = myObject.score;
             //nam = 1;
         }
         else if (myObject.score < score && myObject.score > score1)
         {
-            textscore5 = NameText.userIDs + " " + myObject.score;
+            textscore5 = "2      " + NameText.userIDs + "      " + myObject.score;
             score1 = myObject.score;
             //nam = 1;
         }
         else if (myObject.score < score1 && myObject.score > score2)
-        {
-            textscore6 = NameText.userIDs + " " + myObject.score;
+        {  
+            textscore6 = "3      " + NameText.userIDs + "      " + myObject.score;
             score2 = myObject.score;
             // nam = 1;
         }
