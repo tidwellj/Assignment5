@@ -8,7 +8,7 @@ public class WordDisplay : MonoBehaviour
 
 
     public Text text;
-    public float fallSpeed = 5f;
+    public static float fallSpeed = 1f;
     public static int score = 0;
     public static string diff = DropD1.lives;
     public void Start()
@@ -17,18 +17,18 @@ public class WordDisplay : MonoBehaviour
         {
             diff = SaveBinary.lives2;
         }
-        
-        
-            if (diff == "Easy")
-                fallSpeed = 1f;
-            else if (diff == "Medium")
-                fallSpeed = 2f;
-            else if (diff == "Difficult")
-                fallSpeed = 3f;
-        
+
+
+        if (diff == "Easy")
+            fallSpeed = 1f;
+        else if (diff == "Medium")
+            fallSpeed = 2f;
+        else if (diff == "Difficult")
+            fallSpeed = 3f;
+
 
     }
-    public void SetWord (string word)
+    public void SetWord(string word)
     {
         text.text = word;
     }
@@ -41,13 +41,11 @@ public class WordDisplay : MonoBehaviour
     {
         Destroy(gameObject);
         score = score + 100;
-        Debug.Log(score);
     }
     private void Update()
     {
-        
 
-        Debug.Log(fallSpeed);
+
         transform.Translate(0f, -fallSpeed * Time.deltaTime, 0f);
     }
 }

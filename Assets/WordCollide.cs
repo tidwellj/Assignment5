@@ -25,7 +25,7 @@ public class WordCollide : MonoBehaviour
         bar2.size = .66f;
         bar.size = 1f;
         bar3.size = .33f;
-        
+
     }
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -34,7 +34,7 @@ public class WordCollide : MonoBehaviour
             Destroy(col.gameObject);
 
             bar.gameObject.SetActive(false);
-           // bar2.size = bar.size - .25f;
+            // bar2.size = bar.size - .25f;
 
             if (lives == 2)
                 bar2.gameObject.SetActive(false);
@@ -42,36 +42,33 @@ public class WordCollide : MonoBehaviour
             if (lives == 3)
             {
 
-                    bar.gameObject.SetActive(false);
-                    Debug.Log("colided");
+                bar.gameObject.SetActive(false);
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 scores = WordDisplay.score;
-                
+
                 if (WordDisplay.score > scoreA)
                 {
                     scoreA = WordDisplay.score;
-                    Debug.Log("big" + scoreA);
                 }
-                else if(WordDisplay.score < scoreA && WordDisplay.score > scoreB)
+                else if (WordDisplay.score < scoreA && WordDisplay.score > scoreB)
                 {
                     scoreB = WordDisplay.score;
                 }
-               else if(WordDisplay.score < scoreB && WordDisplay.score > scoreC)
+                else if (WordDisplay.score < scoreB && WordDisplay.score > scoreC)
                 {
                     scoreC = WordDisplay.score;
                 }
-               
-                
-                
+
+
+
                 scoreD = scoreA;
-                Debug.Log("dwa" + scoreD);
                 scoreE = scoreB;
                 scoreF = scoreC;
 
 
 
 
-                // WordDisplay.score = 0;
+                //WordDisplay.score = 0;
 
             }
             lives++;
@@ -79,7 +76,7 @@ public class WordCollide : MonoBehaviour
         }
     }
 
-   
+
 
 
 }

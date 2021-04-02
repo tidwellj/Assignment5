@@ -95,7 +95,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 7746887065399219151}
-  fallSpeed: 1
 --- !u!61 &1066576557100888652
 BoxCollider2D:
   m_ObjectHideFlags: 0
