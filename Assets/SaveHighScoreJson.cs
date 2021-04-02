@@ -117,6 +117,62 @@ public class SaveHighScoreJson : MonoBehaviour
         loaded = true;
 
     }
+    public void Bingo3()
+    {
+        //resave
+        
 
+        myObject.score1 = 3;
+        myObject.score2 = 2;
+        myObject.score3 = 1;
+        myObject.textscore1 = "";
+        myObject.textscore2 = "";
+        myObject.textscore3 = "";
+
+
+
+
+
+        //  myObject.textscore1 = myObject.textscore1;
+
+
+        Debug.Log("quack" + myObject.score);
+
+
+        var json = JsonUtility.ToJson(myObject);
+
+
+        PlayerPrefs.SetString("Save", json);
+
+        PlayerPrefs.Save();
+
+    }
+    public void Bingo4()
+    {
+
+        string json = PlayerPrefs.GetString("Save");
+
+        myObject = JsonUtility.FromJson<SaveHighScoreJson.MyClass>(json);
+
+
+
+
+
+        score = myObject.score1;
+        score1 = myObject.score2;
+        score2 = myObject.score3;
+
+
+        textscore4 = myObject.textscore1;
+        textscore5 = myObject.textscore2;
+        textscore6 = myObject.textscore3;
+
+
+        PlayerPrefs.Save();
+
+
+        loaded = true;
+
+    }
 
 }
