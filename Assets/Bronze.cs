@@ -13,7 +13,7 @@ public class Bronze : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (SaveHighScoreJson.score2 == 8)
+        if (SaveHighScoreJson.score2 == 8 || SaveHighScoreJson.score2 == 0)
             gameObject.SetActive(false);
     }
 }

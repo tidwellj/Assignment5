@@ -13,7 +13,7 @@ public class Gold : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (SaveHighScoreJson.score == 10)
+        if (SaveHighScoreJson.score == 10 || SaveHighScoreJson.score == 0)
             gameObject.SetActive(false);
 
         Debug.Log(SaveHighScoreJson.score);
