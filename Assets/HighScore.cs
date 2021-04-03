@@ -21,7 +21,6 @@ public class HighScore : MonoBehaviour
     void Update()
     {
         // if (SaveHighScoreJson.expo2 == true)
-       
         FindObjectOfType<SaveHighScoreJson>().Bingo2();
 
         FindObjectOfType<SaveHighScoreJson>().Bingo();

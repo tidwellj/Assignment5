@@ -9,7 +9,7 @@ public class PlayAgain : MonoBehaviour
     {
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-        
+        WordDisplay.score = 0;
 
     }
 }

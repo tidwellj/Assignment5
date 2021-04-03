@@ -34,7 +34,6 @@ public class WordCollide : MonoBehaviour
             Destroy(col.gameObject);
 
             bar.gameObject.SetActive(false);
-            // bar2.size = bar.size - .25f;
 
             if (lives == 2)
                 bar2.gameObject.SetActive(false);
@@ -68,7 +67,6 @@ public class WordCollide : MonoBehaviour
 
 
 
-                //WordDisplay.score = 0;
 
             }
             lives++;

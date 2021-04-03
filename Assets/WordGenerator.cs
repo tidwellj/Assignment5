@@ -5,7 +5,7 @@ using UnityEngine;
 public class WordGenerator : MonoBehaviour
 {
     private static string[] wordList = { "sidewalk", "robin", "three","protect", "periodic",
-                                       "somber", "majestic", "jump","pretty", "wound","jazzy" };
+                                       "somber", "majestic", "jump","pretty", "wound","jazzy", "trap","pavement","functional","carry","platform","chance","object" };
    public static string GetRandomWord()
     {
         int randomIndex = Random.Range(0, wordList.Length);
