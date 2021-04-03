@@ -13,7 +13,7 @@ public class silver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (SaveHighScoreJson.score1 ==2)
+        if (SaveHighScoreJson.score1 ==9)
             gameObject.SetActive(false);
     }
 }

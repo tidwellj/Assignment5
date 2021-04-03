@@ -19,6 +19,11 @@ public class WordDisplay : MonoBehaviour
         }
 
 
+        if (SaveJson.expo2 == 1)
+        {
+            diff = SaveJson.difficulty2;
+        }
+
         if (diff == "Easy")
             fallSpeed = 1f;
         else if (diff == "Medium")

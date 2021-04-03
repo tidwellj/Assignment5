@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class WordCollide : MonoBehaviour
 {
     public static int lives = 0;
-
+    public static int destroyed = 0;
     public Scrollbar bar;
     public Scrollbar bar2;
     public Scrollbar bar3;
@@ -32,7 +32,7 @@ public class WordCollide : MonoBehaviour
         if (col.tag == "word")
         {
             Destroy(col.gameObject);
-
+            //public void Remove()
             bar.gameObject.SetActive(false);
 
             if (lives == 2)

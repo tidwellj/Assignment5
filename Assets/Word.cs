@@ -15,6 +15,8 @@ public class Word
         display.SetWord(word);
 
     }
+
+    
     public char GetNextLetter()
     {
         return word[typeIndex];
@@ -27,11 +29,17 @@ public class Word
     public bool WordTyped()
     {
         bool wordTyped = (typeIndex >= word.Length);
+        
+
         if (wordTyped)
         {
             display.RemoveWord();
             
         }
+       
         return wordTyped;
     }
+
+  
+    
 }
